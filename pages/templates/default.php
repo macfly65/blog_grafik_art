@@ -50,7 +50,8 @@
 <div class="container">
 
     <div class="starter-template" style = "padding-top: 100px;">
-    <?= $content; ?>
+        <?= $content; ?>
+
     </div>
 
 </div><!-- /.container -->
