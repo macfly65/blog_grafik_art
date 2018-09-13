@@ -2,7 +2,24 @@
 
 namespace App\Table;
 
-class Article{
+use App\App;
+
+class Article extends Table{
+
+    public static function getLast(){
+
+        return App::getDb()->query("
+              
+            SELECT article.id, article.titre, article.contenu, categories.titre as categorie 
+            FROM article 
+            LEFT JOIN  categories 
+            ON category_id = categories.id
+            ", __CLASS__  );
+
+    }
+
+
+
 
 
      public function __get($key){
