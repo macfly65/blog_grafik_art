@@ -1,16 +1,14 @@
-<ul>
-
-    <?php foreach($db->query('SELECT * FROM article') as $post): ?>
 
 
+    <?php foreach($db->query('SELECT * FROM article', 'App\Table\Article') as $post): ?>
 
-    <li>
-
-        <a href="index.php?p=post&id=<?= $post->id; ?>"><?= $post->titre; ?></a>
+        <h2><a href="<?= $post->url?>"><?= $post->titre; ?></a></h2>
 
 
-    </li>
-<?php endforeach; ?>
+    <p><?= $post->extrait; ?></p>
 
-</ul>
+
+    <?php endforeach; ?>
+
+
 
