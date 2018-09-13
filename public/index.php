@@ -12,16 +12,6 @@ if(isset($_GET['p'])) {
 
 
 
-
-
-//INITIALIZATION DES OBJET
-$db = new \App\Database('blog');
-
-
-
-
-
-
 ob_start();
 
 if ($p === 'home') {
