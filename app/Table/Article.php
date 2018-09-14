@@ -15,22 +15,7 @@ class Article extends Table{
             LEFT JOIN  categories 
             ON category_id = categories.id
             ", __CLASS__  );
-
     }
-
-
-
-
-
-     public function __get($key){
-
-
-         $method = 'get' . ucfirst($key);
-
-         $this->$key = $this->$method();
-
-         return $this->$key;
-}
 
 
     public function getURL(){

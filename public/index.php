@@ -19,6 +19,9 @@ if ($p === 'home') {
 } elseif ($p === 'article') {
     require '../pages/single.php';
 
+}elseif ($p === 'categories'){
+    require '../pages/categorie.php';
+
 }
 
 $content = ob_get_clean();
