@@ -1,52 +1,24 @@
 <?php
-namespace App;
 
-    class App{
+namespace  App;
 
-        const DB_NAME = 'blog';
+class App{
 
-        const DB_USER = 'root';
+    public $title = "mon super site";
 
-        const DB_PASS = 'root';
+    private static $_instance;
 
-        const DB_HOST = 'localhost';
+    public static function getInstance(){
 
+        if(is_null(self::$_instance)){
 
-        private static $database;
-
-        private static $title = "Mon super site";
-
-
-
-        public static function getDb(){
-
-            if ( self::$database === null) {
-
-                self::$database = new Database(self::DB_NAME, self::DB_USER, self::DB_PASS, self::DB_HOST);
-
-            }
-             return self::$database;
+            self::$_instance = new App();
         }
 
-
-        public static function notFound(){
-            header("HTTP/1.0 404 Not Found");
-
-            header('location:index.php?p=404');
-        }
-
-        public static function getTitle(){
-
-            return self::$title;
-
-        }
-
-
-        public static function setTitle($title){
-
-            self::$title = $title;
-        }
-
-
-
+        
+        return self::$_instance;
     }
+
+
+
+}
