@@ -2,31 +2,19 @@
 
 require'../app/Autoloader.php';
 
-\App\Autoloader::register();
+App\Autoloader::register();
 
-if(isset($_GET['p'])) {
-         $p = $_GET['p'];
-} else {
-    $p = 'home';
-}
+var_dump($config =  App\Config::getInstance());
 
 
+var_dump($config =  App\Config::getInstance());
 
-ob_start();
+var_dump($config =  App\Config::getInstance());
 
-if ($p === 'home') {
-    require '../pages/home.php';
-} elseif ($p === 'article') {
-    require '../pages/single.php';
+var_dump($config =  App\Config::getInstance());
 
-}elseif ($p === 'categorie'){
-    require '../pages/categorie.php';
+var_dump($config =  App\Config::getInstance());
 
-}
+var_dump($config =  App\Config::getInstance());
 
-$content = ob_get_clean();
-require '../pages/templates/default.php';
-
-
-?>
-
+var_dump($config);

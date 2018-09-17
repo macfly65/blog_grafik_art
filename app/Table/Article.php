@@ -6,6 +6,9 @@ use App\App;
 
 class Article extends Table{
 
+
+    protected static $table = 'article';
+
     public static function getLast(){
 
         return self::query("

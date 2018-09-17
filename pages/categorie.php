@@ -1,5 +1,7 @@
 <?php
 
+use App\App;
+
 use App\Table\Categorie;
 
 
@@ -7,6 +9,11 @@ use App\Table\Article;
 
 
 $categorie = Categorie::find($_GET['id']);
+
+if($categorie === false){
+
+   App::notFound();
+}
 
 
 $articles  = Article::lastByCategory($_GET['id']);
