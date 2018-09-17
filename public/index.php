@@ -19,7 +19,7 @@ if ($p === 'home') {
 } elseif ($p === 'article') {
     require '../pages/single.php';
 
-}elseif ($p === 'categories'){
+}elseif ($p === 'categorie'){
     require '../pages/categorie.php';
 
 }
