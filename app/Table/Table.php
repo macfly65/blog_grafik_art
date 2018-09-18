@@ -5,9 +5,14 @@ namespace App\Table;
 class Table{
 
     protected $table;
+    protected $db;
 
-    public function __construct()
+    public function __construct(\App\Database $db)
     {
+
+
+        $this->db=$db;
+
         if (is_null($this->table)) {
 
 
@@ -17,8 +22,15 @@ class Table{
 
             $this->table = strtolower(str_replace('Table', '', $class_name));
 
-        }
+            }
         }
 
+        public function query($statement){
+
+
+
+
+
+        }
 
 }

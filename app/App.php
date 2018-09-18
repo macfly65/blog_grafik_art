@@ -25,7 +25,7 @@ class App{
 
         $class_name  = '\\App\\Table\\' .  ucfirst($name) . 'Table';
 
-        return new $class_name();
+        return new $class_name($this->getDb());
     }
 
 
