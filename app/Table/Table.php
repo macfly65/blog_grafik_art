@@ -15,7 +15,7 @@ class Table{
 
             $class_name = end($parts);
 
-            $this->table = strtolower(str_replace('Table', ' ', $class_name));
+            $this->table = strtolower(str_replace('Table', '', $class_name));
 
         }
         }
