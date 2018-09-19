@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Table ;
+namespace  App\Table;
 
 class CategoriesTable extends Table {
 
 
-    protected $table =  "categorie lol";
-
-
+    protected $table = "categorie lol";
 
 }

@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Table ;
+namespace  App\Table;
 
 class UsersTable extends Table {
-
-
 
 
 }
