@@ -1,15 +1,17 @@
 <?php
 
+session_start();
+
 require'../app/Autoloader.php';
 
 App\Autoloader::register();
 
-
 $app = App\App::getInstance();
 
+$post = $app->getTable('Posts');
 
 
-$posts = $app->getTable('Posts');
 
-$posts = $app->getTable('Categories');
+$post->all();
 
+var_dump($post->all());
